@@ -105,4 +105,9 @@ const initAppear = (function init() {
   for (var i = 0; i < circleArray.length; i++) {
     circleArray[i].update();
   }
+
+  ctx.font = '100px Fertigo';
+  ctx.fillStyle = 'Green';
+  ctx.textAlign = 'center';
+  ctx.strokeText('Avinash', canvas.width / 2, canvas.height / 2);
 })();
