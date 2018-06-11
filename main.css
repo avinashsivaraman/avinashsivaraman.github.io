@@ -51,6 +51,15 @@ html {
 
 }
 
+.remove-default {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.home-button-click > i {
+    margin-left: 15px;
+}
+
 .highlight {
     color: var(--color-highlight);
     background-color: var(--color-yellow);
@@ -61,11 +70,11 @@ html {
 .home-text-job {
     margin: 3rem;
 }
-.section-intro {
+/* .section-intro {
     display: block;
     width: 100%;
     height: 100vh
-}
+} */
 
 .home-button {
     font-size: 16px;
@@ -78,4 +87,19 @@ html {
     justify-content: center;
     text-transform: uppercase;
     background-color: var(--color-highlight); 
+}
+
+.home-icon {
+    color: var(--color-white);
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 10rem;
+    width: 100%;
+    left: 20%;
+}
+
+.home-icons {
+    font-size: 72px;
 }
