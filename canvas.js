@@ -6,6 +6,17 @@ canvas.height = window.innerHeight;
 const ctx = canvas.getContext('2d');
 ctx.fillStyle = 'black'
 
+window.addEventListener('mousemove', function (event) {
+  mouse.x = event.x;
+  mouse.y = event.y;
+});
+
+window.addEventListener('resize', function (event) {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  initAppear();
+});
+
 let mouse =  {
   x: undefined,
   y: undefined,
@@ -78,7 +89,7 @@ let circleArray  = [];
 
 const initAppear = (function init() {
   circleArray = [];
-  for (let i = 0; i < 500; i++) {
+  for (let i = 0; i < 100; i++) {
     let x = Math.random() * innerWidth;
     let y = Math.random() * innerHeight;
     let dx = (Math.random() - 0.5) * 3;
@@ -96,14 +107,3 @@ const initAppear = (function init() {
     circleArray[i].update();
   }
 })();
-
-window.addEventListener('mousemove', function(event) {
-  mouse.x = event.x;
-  mouse.y = event.y;
-});
-
-window.addEventListener('resize', function(event) {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  initAppear();
-});
