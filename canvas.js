@@ -4,6 +4,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const ctx = canvas.getContext('2d');
+ctx.fillStyle = 'black'
 
 let mouse =  {
   x: undefined,
@@ -30,17 +31,6 @@ const colors = {
   colorArray,
   colorArray1,
 };
-
-window.addEventListener('mousemove', function(event) {
-  mouse.x = event.x;
-  mouse.y = event.y;
-});
-
-window.addEventListener('resize', function(event) {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  initAppear();
-});
 
 function Circle(x, y, dx, dy, radius, color) {
   this.x = x;
@@ -105,9 +95,15 @@ const initAppear = (function init() {
   for (var i = 0; i < circleArray.length; i++) {
     circleArray[i].update();
   }
-
-  ctx.font = '100px Fertigo';
-  ctx.fillStyle = 'Green';
-  ctx.textAlign = 'center';
-  ctx.strokeText('Avinash', canvas.width / 2, canvas.height / 2);
 })();
+
+window.addEventListener('mousemove', function(event) {
+  mouse.x = event.x;
+  mouse.y = event.y;
+});
+
+window.addEventListener('resize', function(event) {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  initAppear();
+});
